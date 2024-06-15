@@ -3,13 +3,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.*;
-//import javax.servlet.*;
-//import javax.servlet.http.*;
 import java.sql.*;
 
+
 public class AddServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
         String name = request.getParameter("name");
@@ -18,7 +20,7 @@ public class AddServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Mydata", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydada", "root", "");
             PreparedStatement pst = con.prepareStatement("INSERT INTO data(Name, Contact, Email) VALUES (?, ?, ?)");
             pst.setString(1, name);
             pst.setString(2, contact);
@@ -32,8 +34,9 @@ public class AddServlet extends HttpServlet {
             con.close();
         } catch (Exception e) {
             out.println("Error: " + e);
+        } finally {
+            out.close();
         }
-
-        out.close();
     }
 }
+    

@@ -1,9 +1,9 @@
-<%@page import="java.sql.*"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <title>Update Record</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
     int srNo = Integer.parseInt(request.getParameter("u"));
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Mydata", "root", "");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydada", "root", "");
         PreparedStatement pst = con.prepareStatement("SELECT * FROM data WHERE Sr_no=?");
         pst.setInt(1, srNo);
         ResultSet rs = pst.executeQuery();
