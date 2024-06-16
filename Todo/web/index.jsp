@@ -5,6 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CRUD Example</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a{
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <h1>CRUD Example</h1>
@@ -17,7 +23,7 @@
             <th>Action</th>
         </tr>
         <% 
-        try {
+        try { 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydada", "root", "");
             Statement stmt = con.createStatement();
