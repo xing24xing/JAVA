@@ -13,7 +13,7 @@
         Name: <input type="text" name="name"><br><br>
         Contact: <input type="text" name="contact"><br><br>
         Email: <input type="text" name="email"><br><br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="sub">
     </form>
     <br>
     <a href="index.jsp">Back to Home</a>

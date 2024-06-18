@@ -1,9 +1,9 @@
-/* styles.css 
+/* styles.css */
 
- Reset some default styles 
+/* Reset some default styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); 
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 body, html {
@@ -13,17 +13,17 @@ body, html {
     background-color: #f0f0f0;
 }
 
- Header styles 
+/* Header styles */
 h1 {
     text-align: center;
     margin-top: 10px;
     color: #333;
     font-family: "Protest Riot", sans-serif;
-    font-size: 100px;
+    font-size: 50px;
     
 }
 
- Table styles 
+/* Table styles */
 table {
     width: 80%;
     margin: 20px auto;
@@ -44,7 +44,7 @@ table th {
     color: #333;
 }
 
- Form styles 
+/* Form styles */
 form {
     width: 50%;
     margin: 20px auto;
@@ -71,14 +71,20 @@ form input[type="submit"]:hover {
     background-color: #45a049;
 }
 
- Link styles 
+/* Link styles */
 a {
     color: #007bff;
     text-decoration: none;
     margin-left: 10px;
+     font-family: "Roboto Slab", serif;
+    text-align: center;
+   align-items: center;
 }
 
 a:hover {
     text-decoration: underline;
     color: #0056b3;
-}*/
+}
+#sub{
+     font-family: "Pacifico", cursive;
+}
