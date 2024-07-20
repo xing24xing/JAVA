@@ -21,6 +21,7 @@ public class Check_Array_Is_Sorted {
         if(arr[idx]<arr[idx+1])
         {
             
+            System.out.println("Val\n"+arr[idx]);
            return issorted(arr,idx+1,r);
         }
         else{

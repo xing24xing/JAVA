@@ -5,7 +5,7 @@
  */
 package object_oriented_programming;
 
-import PRACTICAL.student;
+//import PRACTICAL.student;
 
 /**
  *

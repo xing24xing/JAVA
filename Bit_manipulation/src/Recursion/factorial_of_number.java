@@ -18,15 +18,16 @@ public class factorial_of_number {
             return 1;
         }
        int f1=calfactorial(n-1);
+        System.out.println(n+" "+f1);
        int f2=n*f1;
        return f2;
        
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        int a=5;
+        int a=6;
         int f=calfactorial(a);
-        System.out.println("Factorial Of 5:- "+f);
+        System.out.println("Factorial Of 6:- "+f);
                 }
     
 }

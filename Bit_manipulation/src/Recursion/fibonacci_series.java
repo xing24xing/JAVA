@@ -12,19 +12,19 @@ import java.util.Scanner;
 public class fibonacci_series {
 
   
-    public static void fibonacci(int a,int b,int n){
+    public static void fibonacci(long a, long b, long n){
         if(n==0)
         {
             return;
         }
-        int c=a+b;
+        long c=a+b;
         System.out.println(c);
         fibonacci(b,c,n-1);
     }
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc=new Scanner(System.in);
-        int a=0,b=1,c;
+        long a=0,b=1,c;
         System.out.println("Enter Any Number");
         c=sc.nextInt();
         System.out.println(a);
