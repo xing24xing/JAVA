@@ -10,14 +10,16 @@ package Leetcode;
  */
 public class Buy_And_Sell_Stock {
    public int maxProfit(int []prices){
-       int minPrice = Integer.MAX_VALUE;
+//       int minPrice = Integer.MAX_VALUE;
+       int minPrice = prices[0];
+              
        System.out.println(minPrice);
        int maxProfit = 0;
        for(int p : prices){
            minPrice = Math.min(minPrice, p);
-           System.out.println(p+" minPrice "+minPrice);
+//           System.out.println(p+" minPrice "+minPrice);
            maxProfit = Math.max(maxProfit, p - minPrice );
-           System.out.println(p+" maxProfit "+maxProfit);
+//           System.out.println(p+" maxProfit "+maxProfit);
        }
        return maxProfit;
    }

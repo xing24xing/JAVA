@@ -14,19 +14,41 @@ public class Kadens_Algorithm {
     int maxSofar = nums[0];
     int maxEndingHere = nums[0];
     for(int i = 1;i  < nums.length;i++){
-        System.out.println(i+"  | 1 nums[i] | "+nums[i]);
+//        System.out.println(i+"  | 1 nums[i] | "+nums[i]);
         maxEndingHere = Math.max(nums[i], maxEndingHere + nums[i]);
-        System.out.println(i+"  | 2 nums[i] | "+nums[i]);
-        System.out.println(i+" | maxEndingValue | "+maxEndingHere);
+//        System.out.println(i+"  | 2 nums[i] | "+nums[i]);
+//        System.out.println(i+" | maxEndingValue | "+maxEndingHere);
         maxSofar = Math.max(maxSofar, maxEndingHere);
-        System.out.println(i+" | maxSofar  | "+maxSofar);
+        System.out.print("["+i+" | maxSofar  | "+maxSofar+"]");
     }
     return maxSofar;
+//   for(int i = 1;i < nums.length;i++){
+//       if(maxEndingHere < nums[i]){
+//           maxEndingHere += nums[i];
+//       }
+//        if(maxEndingHere > maxSofar){
+//             maxSofar = maxEndingHere;
+//       }
+//   }
+   
+//    for(int i = 1;i < nums.length;i++){
+//      
+//           maxEndingHere += nums[i] ;
+//         if(maxEndingHere >maxSofar ){
+//             maxSofar = maxEndingHere;
+//         }
+//         if(maxEndingHere < 0){
+//          maxEndingHere = 0;   
+//         }
+//   }
+//   
+//    return maxSofar;
+//    return maxSofar;
     
 }
     
     public static void main(String[] args) {
-       int[] nums = {-3,-3,1,-3,4,-1,2,1,-5,4};
+       int[] nums = {-3,-3,-1,-3,-1,-1,-2,-3,-5,-4};
        int res = maxSubArray(nums);
         System.out.println("Output :"+res);
     }

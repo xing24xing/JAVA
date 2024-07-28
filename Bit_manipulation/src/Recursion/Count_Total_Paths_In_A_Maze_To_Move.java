@@ -25,7 +25,7 @@ public class Count_Total_Paths_In_A_Maze_To_Move {
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        int m=3,n=3;
+        int m=3,n=2;
         System.out.println("Total Paths : "+maze(0,0,m,n));
         
         
