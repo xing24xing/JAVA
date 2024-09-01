@@ -14,18 +14,29 @@ public class INSERTION_SORT {
  
     public static void Insertion_sort(int arr[], int limit)
     {
-        for (int i = 1; i < limit; i++) {
+//        for (int i = 1; i < limit; i++) {
+//            int temp = arr[i];
+//            int j;
+////             System.out.println("first a[j] : "+arr[j]);
+//           for( j = i;((j > 0) && (arr [j - 1] > temp));j--)
+//           {
+//               arr[j] = arr[j - 1];
+////                  System.out.println("current a[j] : "+arr[j]+" : "+j);
+//           }
+//            System.out.println("");
+//           arr[j] = temp;  // 9
+////            System.out.println("second a[j] : "+arr[j]);
+//        }
+        for(int i = 1;i < limit;i++){
             int temp = arr[i];
-            int j;
-//             System.out.println("first a[j] : "+arr[j]);
-           for( j = i;((j > 0) && (arr [j - 1] > temp));j--)
-           {
-               arr[j] = arr[j - 1];
-//                  System.out.println("current a[j] : "+arr[j]+" : "+j);
-           }
-            System.out.println("");
-           arr[j] = temp;  // 9
-            System.out.println("second a[j] : "+arr[j]);
+            int j = i -1;
+            while(j >= 0 && arr[j] > temp){
+                arr[j+1] = arr[j];
+                System.out.println("val1 "+j);
+                j--;
+            }
+           System.out.println("val2 "+j);
+            arr[j + 1] = temp;
         }
     }
     public static void main(String[] args) {

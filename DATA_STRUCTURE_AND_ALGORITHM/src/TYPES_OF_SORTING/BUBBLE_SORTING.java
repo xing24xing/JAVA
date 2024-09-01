@@ -13,19 +13,39 @@ public class BUBBLE_SORTING {
 
    public static void bubble_sorting(int arr[],int limit)
    {
-     for(int i = 0;i < limit;i++)       
-     {
-         for(int j = 1;j < (limit - i);j++)
-         {
-             if(arr[j - 1] > arr[j])
+//     for(int i = 0;i < limit;i++)       
+//     {
+//         for(int j = 1;j < (limit - i);j++)
+//         {
+//             System.out.println(i+" "+j);
+//             if(arr[j - 1] > arr[j])
+//             {
+//                 int t = arr[j - 1];
+//                 arr[j - 1] = arr[j];
+//                 arr[j] = t;
+//             }
+//         }
+//     }
+     for(int i = 0;i < limit - 1;i++){
+         boolean swapped = false;
+         for(int j = 0; j < (limit - i -1);j++ ){
+             if(arr[j+1] < arr[j])
              {
-                 int t = arr[j - 1];
-                 arr[j - 1] = arr[j];
-                 arr[j] = t;
+                 swap(arr,j+1,j);
+                 swapped = true;
              }
+         }
+         if(!swapped){
+             break;
          }
      }
    }
+   public static void swap(int []arr,int i ,int j){
+        int t = arr[i];
+            arr[i] = arr[j];
+            arr[j] = t;
+   }
+   
     /**
      * @param args the command line arguments
      */

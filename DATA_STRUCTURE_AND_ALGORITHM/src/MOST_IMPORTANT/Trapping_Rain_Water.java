@@ -17,31 +17,31 @@ public class Trapping_Rain_Water {
             if(height[left] < height[right]){
                 if(height[left] >= leftMax){
                     leftMax = height[left];
-                    System.out.println("1: leftMax idx " + leftMax);
+//                    System.out.println("1: leftMax idx " + leftMax);
                 }else{
                     water += leftMax - height[left];
-                    System.out.println("left Height : "+height[left]);
-                    System.out.println("left Leftmax "+leftMax);
-                    System.out.println("left Water val "+water+" : "+left);
+//                    System.out.println("left Height : "+height[left]);
+//                    System.out.println("left Leftmax "+leftMax);
+//                    System.out.println("left Water val "+water+" : "+left);
                     
                 }
                 left++;
             }else{
                 if(height[right] >= rightMax){
                     rightMax = height[right];
-                     System.out.println("2 : RightMax idx " + rightMax);
+//                     System.out.println("2 : RightMax idx " + rightMax);
                 }else{
                     water += rightMax - height[right];
-                     System.out.println("right Height : "+height[right]);
-                    System.out.println("right RIGHT "+rightMax);
-                    System.out.println("right Water val "+water+" : "+right);
+//                     System.out.println("right Height : "+height[right]);
+//                    System.out.println("right RIGHT "+rightMax);
+//                    System.out.println("right Water val "+water+" : "+right);
                 }right--;
             }
         }
         return water;
     }
    public static void main(String[] args) {
-       int [] height = {0,1,0,2,1,0,1,3,2,1,2,1,5};
+       int [] height = {3,1,2,4,0,1,3,2};
        System.out.println(trap(height));
        
     }

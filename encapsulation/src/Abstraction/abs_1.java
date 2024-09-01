@@ -21,6 +21,7 @@ abstract class Animal{
    }
 }
 class horse extends Animal{
+//    super.
     horse(){
         System.out.println("You are creating horse");
     }

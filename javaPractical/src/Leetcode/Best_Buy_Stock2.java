@@ -21,7 +21,7 @@ public class Best_Buy_Stock2 {
     public static void main(String[] args) {
         // TODO code application logic here
         Best_Buy_Stock2 buy = new Best_Buy_Stock2();
-        int [] prices = {7,1,5,3,6,4};
+        int [] prices = {7,1,5,3,6,4,8};
         int max = buy.maxProfit(prices);
         System.out.println("Maximum Profit : "+max);
        

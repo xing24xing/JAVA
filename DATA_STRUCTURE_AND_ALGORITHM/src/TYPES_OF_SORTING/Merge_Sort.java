@@ -4,16 +4,13 @@
  */
 package TYPES_OF_SORTING;
 
-/**
- *
- * @author khushi pandey
- */
 import java.util.Scanner;
 public class Merge_Sort {
 
     public static void counquer(int arr[],int start,int mid,int end)
     {
         int merged[] = new int[end-start+1];
+        System.out.println("len : "+merged.length);
         int idx1 = start;
         int idx2 = mid+1;
         int x = 0;
@@ -29,7 +26,7 @@ public class Merge_Sort {
                 merged[x++]=arr[idx2++];
             }
         }
-        while(idx1<=mid )
+        while(idx1<=mid)
         {
              merged[x++]=arr[idx1++];
         }
@@ -49,6 +46,7 @@ public class Merge_Sort {
             return;
         }
         int mid = start +(end - start)/2;
+        System.out.println("Mid : "+mid+" start :" +start+" End : "+end);
         divide(arr,start,mid);
         divide(arr,mid+1,end);
         counquer(arr,start,mid,end);
