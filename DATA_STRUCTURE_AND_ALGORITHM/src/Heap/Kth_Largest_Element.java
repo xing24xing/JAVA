@@ -8,6 +8,9 @@ import java.util.*;
  *
  * @author khushi pandey
  */
+//min head by default
+//kth min ele max heap
+//kth max ele min heap
 public class Kth_Largest_Element {
 
     public static Integer large(int [] arr,int k){
@@ -24,8 +27,8 @@ public class Kth_Largest_Element {
         return pq.peek();
     }
     public static void main(String[] args) {
-       int []arr = {1,4,2,4,5,6};
-       int res = large(arr,5);
+       int []arr = {20,10,60,30,50,40};
+       int res = large(arr,3);
         System.out.println(res);
     }
     
