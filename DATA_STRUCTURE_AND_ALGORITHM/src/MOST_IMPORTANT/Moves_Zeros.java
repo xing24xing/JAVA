@@ -20,6 +20,40 @@ public class Moves_Zeros {
             nums[i] = 0;
         }
     }
+//        public static void swap(int[]arr,int i,int j){
+//        int t = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = t;
+//    }
+//    public static void movesZero(int[] nums){
+//        int lastNonZeroFound = nums.length-1;
+////        int j = nums.length-1 ;
+//        for(int i  = nums.length-1;i >= 0;i--){
+//             
+////             System.out.println("First : "+"lastVal : "+nums[lastNonZeroFound] +" : "+lastNonZeroFound+" val :"+nums[i]+" : "+i);
+//            if(nums[i] != 0)
+//            {
+//                j = i - 1;
+//                System.out.println("j "+j);
+//                nums[lastNonZeroFound]= nums[i];
+////              
+//                 System.out.println("lastVal : "+nums[lastNonZeroFound] +" : "+lastNonZeroFound+" val :"+nums[i]+" : "+i);
+//                 lastNonZeroFound--;
+////                 swap(nums,j,i);
+////                 
+//            }
+//            
+//             
+//        }
+//        System.out.println(lastNonZeroFound);
+//        for(int i = lastNonZeroFound;i >=0;i--){
+//            nums[i] = 0;
+//           
+//            System.out.println(nums[i]+" : "+i);
+//        }
+//        
+//    }
+
     public static void main(String[] args) {
         int [] nums = {0,1,0,3,12};
         movesZero(nums);

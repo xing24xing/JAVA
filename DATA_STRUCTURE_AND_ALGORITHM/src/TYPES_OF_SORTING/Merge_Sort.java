@@ -38,6 +38,9 @@ public class Merge_Sort {
         {
             arr[j]=merged[i];
         }
+//       for(int k = 0;k <= end;k++){
+//           arr[k] =meed[k];
+//       }
     }
     public static void divide(int arr[],int start,int end)
     {
@@ -46,28 +49,41 @@ public class Merge_Sort {
             return;
         }
         int mid = start +(end - start)/2;
-        System.out.println("Mid : "+mid+" start :" +start+" End : "+end);
+//        System.out.println("Mid : "+mid+" start :" +start+" End : "+end);
         divide(arr,start,mid);
         divide(arr,mid+1,end);
         counquer(arr,start,mid,end);
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Range Of An Array");
-        int range=sc.nextInt();
-        int arr[]=new int[100];
-        System.out.println("Enter The Elements");
-        for(int i=0;i<range;i++)
-        {
-            arr[i]=sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter Range Of An Array");
+//        int range=sc.nextInt();
+//        int arr[]=new int[100];
+//        System.out.println("Enter The Elements");
+//        for(int i=0;i<range;i++)
+//        {
+//            arr[i]=sc.nextInt();
+//        }
+//        System.out.println("Merge Sorting");
+//        divide(arr,0,range-1);
+//        for(int i=0;i<range;i++)
+//        {
+//            System.out.println(arr[i]+" ");
+//        }
+  
+//    }
+        int [] arr = {8,6,7,8,3,2};
+//        int pivot = 
+        divide(arr,0,arr.length-1);
+//        for(int i = 0;i < arr.length;i++)
+//        {
+//            System.out.println(arr[i]);
+//        }
+         for (int i : arr) {
+            System.out.print(i + " ");
         }
-        System.out.println("Merge Sorting");
-        divide(arr,0,range-1);
-        for(int i=0;i<range;i++)
-        {
-            System.out.println(arr[i]+" ");
-        }
+         System.out.println();
     }
     
 }
