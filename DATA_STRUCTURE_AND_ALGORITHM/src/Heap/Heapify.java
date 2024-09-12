@@ -39,7 +39,7 @@ public class Heapify {
 
         // Build heap (rearrange array)
         for (int i = n / 2 - 1; i >= 0; i--) {
-            System.out.println("i :" + i);
+//            System.out.println("i :" + i);
             sort(arr, n, i);
         }
 
