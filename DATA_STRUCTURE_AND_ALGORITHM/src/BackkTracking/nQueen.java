@@ -12,7 +12,7 @@ public class nQueen {
 
     public static boolean nQueen(int[][] board,int r,int N){
         if(r == N) return true;
-        System.out.println("r : "+r);
+//        System.out.println("r : "+r);
         for(int c = 0;c < N;c++){
             if(isSafe(board,r,c,N)){
                 board[r][c] = 1;
