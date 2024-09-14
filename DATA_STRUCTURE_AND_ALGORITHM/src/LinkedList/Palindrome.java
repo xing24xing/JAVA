@@ -37,17 +37,17 @@ public class Palindrome {
         }
         System.out.println("null");
     }
-    public Node reverse(Node head){
-        Node cur = head;
-        Node prev = null;
-        while(cur!=null){
-            Node t = cur.next;
-            cur.next = prev;
-            prev = cur;
-            cur = t;
-        }
-        return prev;
-    }
+//    public Node reverse(Node head){
+//        Node cur = head;
+//        Node prev = null;
+//        while(cur!=null){
+//            Node t = cur.next;
+//            cur.next = prev;
+//            prev = cur;
+//            cur = t;
+//        }
+//        return prev;
+//    }
     public static void main(String[] args) {
         Palindrome p = new Palindrome();
         p.insert(1);
@@ -56,8 +56,9 @@ public class Palindrome {
         p.insert(4);
         p.insert(5);
         p.print();
-        p.head = p.reverse(p.head);
-        p.print();
+//        p.head = p.reverse(p.head);
+//        p.print();
+      
     }
     
 }

@@ -10,11 +10,55 @@ package BackkTracking;
  */
 public class nQueen {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static boolean nQueen(int[][] board,int r,int N){
+        if(r == N) return true;
+        System.out.println("r : "+r);
+        for(int c = 0;c < N;c++){
+            if(isSafe(board,r,c,N)){
+                board[r][c] = 1;
+                if(nQueen(board,r+1,N)){
+                    return true;
+                }
+                board[r][c] = 0;
+            }
+        }
+        return false;
+    }
+    public static boolean isSafe(int[][] board,int r,int c,int N){
+       for(int i = 0;i < r;i++){
+           if(board[i][c] == 1) {
+               return false;
+           }
+        }
+       for(int i = r,j = c;i >= 0 && j >=0;i--,j--){
+           if(board[i][j] == 1) {
+               return false;
+           }
+       }
+       for(int i = r,j = c;i >= 0 && j < N;i--,j++){
+           if(board[i][j] == 1) {
+               return false;
+           }
+       }
+        return true;
+    }
+    public static void print(int [][] board,int N){
+        for(int i = 0;i < N;i++){
+            for(int j = 0;j < N;j++){
+                System.out.print(board[i][j]+" ");
+            }
+            System.out.println("");
+        }
+    }
     public static void main(String[] args) {
-        // TODO code application logic here
+       int N = 4; // Change N to the desired size of the board
+        int[][] board = new int[N][N];
+
+        if (nQueen(board, 0, N)) {
+            print(board, N);
+        } else {
+            System.out.println("No solution exists for " + N + " queens.");
+        }
     }
     
 }
