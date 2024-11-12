@@ -3,36 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Place_Tile.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/stack_height.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/fibonacci_series.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Palindrome.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/PowerSet.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Palindrome_String.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/print_no_from_1_to_range.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Print_Unique_Substring.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Count_Total_Paths_In_A_Maze_To_Move.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Prime_Or_Not_2.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Print_All_Subsequence_Of_String.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Josephes_Problem.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Print_String_In_Reverse.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/factorial_of_number.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/priint_no_from_1_to_5.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Check_Array_Is_Sorted.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/PowerSetIterative.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Palindrome_Or_Not.java</file>
             <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/First_and_Last_occurance.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/tower_of_hanoi.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/bit_manipulation/Bit_manipulation.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Matrix_N_And_M.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/bit_manipulation/set_bit.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/factorial_of_no.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Remove_Duplicate_From_String.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/facorial2.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/prime_or_not.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/print_no_reverse_given_range.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Print_All_Permutation_Of_A_String.java</file>
-            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Print_Keypad_Combination.java</file>
+            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Prime_Or_Not_2.java</file>
+            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/Josephes_Problem.java</file>
+            <file>file:/E:/JAVA/Bit_manipulation/src/Recursion/PowerSetIterative.java</file>
         </group>
     </open-files>
 </project-private>

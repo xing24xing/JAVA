@@ -31,7 +31,7 @@ public class Product_Except_Self {
     }
 
     public static void main(String[] args) {
-       int [] arr = {2,2,3,4};
+       int [] arr = {1,2,3,4};
        int[] res= productExceptSelf(arr);
         System.out.println(java.util.Arrays.toString(res));
        
