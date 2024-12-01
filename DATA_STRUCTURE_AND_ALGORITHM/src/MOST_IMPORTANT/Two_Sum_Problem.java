@@ -21,7 +21,7 @@ public class Two_Sum_Problem {
           {
 //              System.out.println(map);
               return new int[] {map.get(com),i};
-              
+                 
           }
       
           map.put(nums[i], i);

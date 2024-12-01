@@ -19,7 +19,7 @@ public class Add {
 //            
 //            
 //    }
-    public  static Node Insert(Node h,int d){
+    public static Node Insert(Node h,int d){
         Node n = new Node(d);
         n.next = h;
         return n;   
@@ -79,7 +79,7 @@ return c;
        Node n = new Node(1);
        n.next = new Node(2);
        n.next.next = new Node(3);
-       n.next.next.next = new Node(8);
+       n.next.next.next = new Node(8 );
        print(n);
         System.out.println("Total Length : "+len(n));
        int d =2;
