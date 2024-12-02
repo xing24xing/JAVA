@@ -13,14 +13,16 @@ public class Check_N_And_If_Its_Double_exist {
 
     public static boolean checkIfExist(int[] arr) {
         HashSet<Integer> seen = new HashSet<>();
-
+        System.out.println(seen);
         for (int num : arr) {
             // Check if the current number's double or half exists in the set
             if (seen.contains(2 * num) || (num % 2 == 0 && seen.contains(num / 2))) {
                 return true;
             }
+            
             // Add the current number to the set
             seen.add(num);
+            System.out.println(seen);
         }
 
         return false;
