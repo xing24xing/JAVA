@@ -5,7 +5,7 @@
 
 Welcome to my collection of Java DSA and OOPs problem solutions! Here, I’ve solved various challenging problems, implemented efficient algorithms, and demonstrated key object-oriented programming concepts. 🌟
 
-![Description of the Image](DATA_STRUCTURE_AND_ALGORITHM/build/classes/image/Screenshot%202024-12-03%20171644.png)
+![Description of the Image](DATA_STRUCTURE_AND_ALGORITHM/build/classes/image/Screenshot%202024-12-03%20171740.png)
 
 ## 📖 Topics Covered
  - 💡 Data Structures: Arrays, Linked Lists, Stacks, Queues, Trees, Graphs.
