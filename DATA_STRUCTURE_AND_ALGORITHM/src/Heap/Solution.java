@@ -1,98 +1,83 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package Heap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
 
-import java.util.*;
-
-class Solution {
-    public int maxRemovableQueries(int[] nums, int[][] queries) {
-        int n = nums.length;
-        int qLen = queries.length;
-
-        // To store the impact of queries on nums
-        int[] impact = new int[n];
-
-        // Apply all queries and accumulate their impact
-        for (int[] query : queries) {
-            int l = query[0], r = query[1];
-            for (int i = l; i <= r; i++) {
-                impact[i]++;
-            }
+public class Solution {
+    // Function to check if a number is prime
+    private boolean isPrime(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
         }
+        return true;
+    }
 
-        // Helper function to check if nums can still be reduced to 0 after removing queries
-        boolean canMakeZeroArray(int[] nums, int[] impact, int queriesToRemove) {
-            int[] tempImpact = Arrays.copyOf(impact, n);
-            int removed = 0;
-            for (int i = 0; i < queries.length; i++) {
-                if (removed >= queriesToRemove) {
-                    break;
-                }
-                int l = queries[i][0], r = queries[i][1];
-                // Check if the query can be removed
-                boolean canRemove = true;
-                for (int j = l; j <= r; j++) {
-                    if (nums[j] > tempImpact[j]) {
-                        canRemove = false;
-                        break;
+    // BFS-based approach to find the minimum transformation cost
+    public int minOperations(int n, int m) {
+        // If n is the same as m, no transformation is needed
+        if (n == m) return 0;
+
+        // Initialize the queue for BFS, and the visited set to avoid revisiting numbers
+        Queue<int[]> queue = new LinkedList<>();
+        Set<Integer> visited = new HashSet<>();
+
+        // Start with the initial number 'n' and the accumulated cost (initially n itself)
+        queue.offer(new int[]{n, 0});
+        visited.add(n);
+
+        // Perform BFS to explore all transformations
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int currentNum = current[0];
+            int currentCost = current[1];
+
+            System.out.println("Processing number: " + currentNum + " with accumulated cost: " + currentCost);
+
+            // Convert currentNum to a string to easily access its digits
+            String strNum = String.valueOf(currentNum);
+
+            // Try to increase or decrease each digit of currentNum
+            for (int i = 0; i < strNum.length(); i++) {
+                int digit = strNum.charAt(i) - '0';
+
+                // Try increasing the digit (if it's not 9)
+                if (digit < 9) {
+                    int newNum = currentNum + (int) Math.pow(10, strNum.length() - 1 - i);
+                    if (!visited.contains(newNum) && !isPrime(newNum)) {
+                        visited.add(newNum);
+                        queue.offer(new int[]{newNum, currentCost + Math.abs(newNum - currentNum)});
+                        System.out.println("Increased digit " + digit + " to form " + newNum + " with cost " + (currentCost + Math.abs(newNum - currentNum)));
                     }
                 }
 
-                // If the query can be removed, update the impact and increase the removal count
-                if (canRemove) {
-                    removed++;
-                    for (int j = l; j <= r; j++) {
-                        tempImpact[j]--;
+                // Try decreasing the digit (if it's not 0)
+                if (digit > 0) {
+                    int newNum = currentNum - (int) Math.pow(10, strNum.length() - 1 - i);
+                    if (!visited.contains(newNum) && !isPrime(newNum)) {
+                        visited.add(newNum);
+                        queue.offer(new int[]{newNum, currentCost + Math.abs(newNum - currentNum)});
+                        System.out.println("Decreased digit " + digit + " to form " + newNum + " with cost " + (currentCost + Math.abs(newNum - currentNum)));
                     }
                 }
             }
 
-            // If we managed to remove the desired number of queries and still can make the array zero
-            for (int i = 0; i < n; i++) {
-                if (nums[i] > tempImpact[i]) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        // Perform binary search to find the maximum removable queries
-        int left = 0, right = qLen;
-        int result = -1;
-
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-
-            if (canMakeZeroArray(nums, impact, mid)) {
-                result = mid;
-                left = mid + 1;
-            } else {
-                right = mid - 1;
+            // If we reached the target 'm', return the accumulated cost
+            if (currentNum == m) {
+                System.out.println("Reached target " + m + " with total cost: " + currentCost);
+                return currentCost;
             }
         }
 
-        return result;
+        // If no transformation is found, return -1
+        System.out.println("Transformation is impossible.");
+        return -1;
     }
 
     public static void main(String[] args) {
-        Solution sol = new Solution();
-
-        // Test case 1
-        int[] nums1 = {2, 0, 2};
-        int[][] queries1 = {{0, 2}, {0, 2}, {1, 1}};
-        System.out.println("Max removable queries for Example 1: " + sol.maxRemovableQueries(nums1, queries1)); // Expected output: 1
-
-        // Test case 2
-        int[] nums2 = {1, 1, 1, 1};
-        int[][] queries2 = {{1, 3}, {0, 2}, {1, 3}, {1, 2}};
-        System.out.println("Max removable queries for Example 2: " + sol.maxRemovableQueries(nums2, queries2)); // Expected output: 2
-
-        // Test case 3
-        int[] nums3 = {1, 2, 3, 4};
-        int[][] queries3 = {{0, 3}};
-        System.out.println("Max removable queries for Example 3: " + sol.maxRemovableQueries(nums3, queries3)); // Expected output: -1
+        Solution solution = new Solution();
+        System.out.println("Output: " + solution.minOperations(15, 88));
     }
 }
+
+
