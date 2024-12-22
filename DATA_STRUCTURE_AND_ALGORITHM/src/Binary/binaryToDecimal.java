@@ -8,26 +8,22 @@ package Binary;
  *
  * @author khushi pandey
  */
-public class BinaryToDecimal {
+public class binaryToDecimal {
 
-    public static int decimalToBinary(int num) {
-        int pow = 1;
-        int ans = 0;
+    public static int binaryToDecimal(int num) {
+        int ans = 0, pow = 1;
         while (num > 0) {
-            int r = num % 2;
-            ans += (r * pow);
-            num = num / 2;
-            pow = pow * 10;
+            int r = num % 10;
+            ans += r * pow;
+            num /= 10;
+            pow = pow * 2;
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        int num = 50;
-
-        int ans = decimalToBinary(num);
-        System.out.println(ans);
-
+        int num = 1000;
+        System.out.println(binaryToDecimal(num));
     }
 
 }
