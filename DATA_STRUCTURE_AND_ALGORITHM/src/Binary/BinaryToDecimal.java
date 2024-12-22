@@ -10,11 +10,24 @@ package Binary;
  */
 public class BinaryToDecimal {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static int decimalToBinary(int num) {
+        int pow = 1;
+        int ans = 0;
+        while (num > 0) {
+            int r = num % 2;
+            ans += (r * pow);
+            num = num / 2;
+            pow = pow * 10;
+        }
+        return ans;
     }
-    
+
+    public static void main(String[] args) {
+        int num = 50;
+
+        int ans = decimalToBinary(num);
+        System.out.println(ans);
+
+    }
+
 }
