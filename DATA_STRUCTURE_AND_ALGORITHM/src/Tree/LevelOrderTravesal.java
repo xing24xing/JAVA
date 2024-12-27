@@ -96,16 +96,52 @@ public class LevelOrderTravesal {
          int max = Math.max(left, right) + 1;
          return max;
      }
+     static class TreeInfo{
+        int ht;
+        int dia;
+        TreeInfo(int ht,int dia){
+            this.ht = ht;
+            this.dia = dia;
+        }
+    }
+     public static TreeInfo diameter(Node root){
+         if(root == null) return new TreeInfo(0, 0);
+         TreeInfo left = diameter(root.left);
+         TreeInfo right = diameter(root.right);
+         
+         int ht = Math.max(left.ht , right.ht) + 1;
+         int dia1 = left.dia;
+         int dia2 = right.dia;
+         int dia3 = left.ht + right.ht + 1;
+         
+         int mydia = Math.max(dia3,Math.max(dia1, dia2));
+        TreeInfo myinfo = new TreeInfo(ht,mydia);
+        return myinfo;
+         
+     }
+     public static int diameterOfTree(Node root){
+         if(root == null) return 0;
+         int left = diameterOfTree(root.left);
+         int right = diameterOfTree(root.right);
+         int dia = heightOfTree(root.left) + heightOfTree(root.right) + 1;
+         return Math.max(dia, Math.max(left, right));
+     }
     }
 
     public static void main(String[] args) {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
-        Tree t = new Tree();
+        Tree t = new Tree(); 
         Node root = t.buildTree(nodes);
         System.out.println("Level Order Traversal:");
         Tree.levelOrder(root);
+        System.out.println("Count Of Nodes");
         System.out.println(Tree.countOfNodes(root));
+        System.out.println("Sum Of Nodes");
         System.out.println(Tree.sumOfNodes(root));
+        System.out.println("Height Of Nodes");
         System.out.println(Tree.heightOfTree(root));
+        System.out.println("Diameter Of Nodes");
+        System.out.println(Tree.diameterOfTree(root));
+        System.out.println(Tree.diameter(root).dia);
     }
 }
