@@ -74,7 +74,28 @@ public class LevelOrderTravesal {
                 System.out.println(); // New line after each level
             }
         }
-
+        public static int countOfNodes(Node root){
+            if(root == null) return 0;
+            int left = countOfNodes(root.left);
+            int right = countOfNodes(root.right);
+            
+            return left + right + 1;
+        }
+     public static int sumOfNodes(Node root){
+         if(root == null) return 0;
+         int left = sumOfNodes(root.left);
+         int right = sumOfNodes(root.right);
+         
+         return left + right + root.data;
+         
+     }
+     public static int heightOfTree(Node root){
+         if(root == null) return 0;
+         int left = heightOfTree(root.left);
+         int right = heightOfTree(root.right);
+         int max = Math.max(left, right) + 1;
+         return max;
+     }
     }
 
     public static void main(String[] args) {
@@ -83,5 +104,8 @@ public class LevelOrderTravesal {
         Node root = t.buildTree(nodes);
         System.out.println("Level Order Traversal:");
         Tree.levelOrder(root);
+        System.out.println(Tree.countOfNodes(root));
+        System.out.println(Tree.sumOfNodes(root));
+        System.out.println(Tree.heightOfTree(root));
     }
 }
