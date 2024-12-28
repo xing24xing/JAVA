@@ -140,8 +140,9 @@ public class LevelOrderTravesal {
         System.out.println(Tree.sumOfNodes(root));
         System.out.println("Height Of Nodes");
         System.out.println(Tree.heightOfTree(root));
-        System.out.println("Diameter Of Nodes");
+        System.out.println("Case 1 Diameter Of Tree");
         System.out.println(Tree.diameterOfTree(root));
+        System.out.println("Case 2 Diameter of Tree");
         System.out.println(Tree.diameter(root).dia);
     }
 }
